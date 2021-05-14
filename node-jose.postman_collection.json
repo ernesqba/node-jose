@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "4a964298-e31c-4881-9a34-37acab2c3752",
+		"name": "node-jose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pems",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/pems",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pems"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Encrypt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payload\":{\r\n        \"value1\":\"value1\",\r\n        \"value2\":\"value2\",\r\n        \"value3\":\"value3\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/encrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"encrypt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decrypt",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payload\":\"eyJhbGciOiJSU0EtT0FFUCIsInR5cCI6Imp3ZSIsImVuYyI6IkExMjhDQkMtSFMyNTYiLCJraWQiOiJKYXhCZDlWTmhDNUlqQ3lSb2gtRTBzRHBVMmVJYkhBNFY2Y2FtM2hyLXlFIn0.isoUB6vniuRgUq5XAqwbCdN2jaUrz_VThvRU4f_-RUGukmUD3B9av9SiJ-hRxm7hlN4s2Bpvnrw7BHXS8o-MkYRqzH2zELlxONA56eyLjljyBamJPNEuJjGC-1VfQHXV0PopNfyuwfzJCyDLQ8tuP-6xEu3pkmfogJqGXEp8OuTFxW4dYomCS8yaD_V1-mh9xuDFp-ogMfsSI_-KTuTLe2YbVcrSTZReeI8E0Swm_Ky0kaK9DQ0blfBH29ZkuMuzXHM9RMFhoG53HkSLCtoim8Y93TRCBitdob8r5l581vE4dsdrf6T1yejc7-L40Ke_O_ZohE70mNlXVfg5ApKV2w.wvxxWIdNbcJvaeOG26HVlQ.8oo_eJvVvmUtpx75RU0HPsnYYWnXNf8zF6sa9VYSOuO9N6FpqX_EPYvGnH5UiPwhVeSWPOOKYkMGqgJcfpbP_Q.fF1gBbqBS7iMyPk25jznWg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/decrypt",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"decrypt"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
